@@ -51,7 +51,7 @@ class MainActivity : ComponentActivity() {
                         .fillMaxWidth(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-
+                    MenuApp()
                 }
             }
         }
@@ -95,18 +95,22 @@ fun MenuCard(platillo: Platillo, modifier: Modifier = Modifier){
     }
     Spacer(modifier = Modifier.height(8.dp))
 }
+@Composable
+fun MenuApp(){
+    LazyColumn {
+        items(DataSource().LoadPlatillos())
+        {
+                platillo -> MenuCard(platillo = platillo, modifier = Modifier)
+        }
+    }
+}
 
 
 @Preview(showBackground = true)
 @Composable
 fun MenuPlatilloPreview(){
     ListaComidaTheme {
-        LazyColumn {
-            items(DataSource().LoadPlatillos())
-            {
-                platillo -> MenuCard(platillo = platillo, modifier = Modifier)
-            }
-        }
+        MenuApp()
     }
 }
 
