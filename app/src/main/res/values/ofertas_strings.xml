@@ -1,0 +1,8 @@
+<resources>
+    <string name="of_desayuno">Ahorra hasta el 30%</string>
+    <string name="of_hamburger">Ahorra hasta el 20%</string>
+    <string name="of_pizza">Ahorra hasta el 10%</string>
+    <string name="of_postre">Ahorra hasta el 15%</string>
+    <string name="of_pozole">Ahorra hasta el 5%</string>
+    <string name="of_tacos">Ahorra hasta el 35%</string>
+</resources>
